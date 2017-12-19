@@ -5,7 +5,7 @@ Update the spark chart
 @method sparkChart
 @param {String} property the property name with the chart data
 @param {String} className the class name of the sparkchart element
-*/ 
+*/
 var sparkChart = function(template, property, className){
     var fields = {};
     fields[property] = 1;
@@ -170,7 +170,7 @@ Template['indexMeteor'].onRendered(function(){
             })
 
         var data = Blockchain.findOne('meta', {fields: {blockPropagationChart: 1}}).blockPropagationChart;
-
+        console.log("data = "+JSON.stringify(data))
         if(data.length === 0)
             return;
 

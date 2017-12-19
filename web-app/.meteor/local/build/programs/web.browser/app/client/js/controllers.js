@@ -126,6 +126,7 @@ socket.on('open', function open() {
 })
 .on('data', function incoming(data) {
 	socketAction(data.action, data.data);
+	console.log('data = ');
 });
 
 socket.on('init', function(data)
